@@ -5,6 +5,10 @@ let phoneNumbers: string[] = array.filter(item => /\b\d{3}-\d{3}-\d{4}\b/.test(i
 
 console.log(phoneNumbers);
 
+// [ '414-555-3212', '123-456-7890', '999-888-7777' ]
+
+console.log(!phoneNumbers)
+
 /*
 
 Using regular expressions (regex) for 

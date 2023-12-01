@@ -78,6 +78,10 @@ filteredLibrary.forEach(book => {
 
 /*
 
+User: Alice, Topic: chapter, Keyword: interfaces
+User: Bob, Topic: section, Keyword: types
+User: Dave, Topic: examples, Keyword: types
+
 Explanation:
 We define two interfaces: Comment and Book. 
 Each Book has a title and an array of Comment objects.

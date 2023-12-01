@@ -16,6 +16,16 @@ interface Person {
   
   console.log(filteredObjects);
 
+  /*
+
+  [
+  { name: 'Alice', phoneNumber: '123-456-7890' },
+  { name: 'Bob', phoneNumber: '987-654-3210' },
+  { name: 'Jennifer', phoneNumber: '414-555-8800' }
+]
+
+  /*
+
 /*
 An interface Person is defined with two properties: 
 name and phoneNumber, both of which are of type string.
