@@ -33,3 +33,20 @@ or
 - Usernames - 3 to 16 chars, must only consist of numbers, letters and underscores
 
 **Trying to verify these patterns without the use of Regular Expressions is a nightmare 😭.  It's possible, but it means writing tons of loops and complex logic.**
+
+### Testing and playing with REGEX:
+
+```
+I highly recommend using an online editor like https://regexr.com to test out your Regular Expressions. I'll be using it throughout this video.
+```
+
+
+### REGEX Syntax
+
+### Standard REGEX format
+
+**When we write regular expressions in most programming languages we wrap them in single forward slashes:**
+
+```
+/ your regex goes inbetween forward slashes /
+```
