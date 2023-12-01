@@ -50,3 +50,44 @@ I highly recommend using an online editor like https://regexr.com to test out yo
 ```
 / your regex goes inbetween forward slashes /
 ```
+
+```
+let array = ["414-555-3212", "123-456-7890", "not a phone number", "999-888-7777"];
+
+let phoneNumbers = array.filter(item => /\b\d{3}-\d{3}-\d{4}\b/.test(item));
+```
+
+### Putting it all together:
+
+**The goal is to create a regular expression that matches a 24-hour time format. Valid times can include hours and minutes, and optionally seconds. Hours can be with or without a leading zero (e.g., 02:45 or 2:45). The regex should ensure that the times are valid (e.g., 25:80 should not be considered valid).**
+
+## Regular Expression Explanation
+
+**([01]?[0-9]|2[0-3]): This part matches the hour. It allows for hours 00-19 ([01]?[0-9]) and 20-23 (2[0-3]).**
+**:([0-5][0-9]): This matches the minutes, ensuring they are in the range 00-59.**
+
+**(?::([0-5][0-9]))?: This is an optional non-capturing group for seconds.**
+
+**It matches : followed by a two-digit number in the range 00-59.**
+
+**The ? at the end makes this group optional.**
+
+**\b at the beginning and end ensures the match occurs at word boundaries, preventing the regex from matching invalid times like 55:45.**
+
+```TypeScript Example
+// Here's how you can use this regex in TypeScript:
+
+const timeRegex = /\b([01]?[0-9]|2[0-3]):([0-5][0-9])(?::([0-5][0-9]))?\b/;
+
+// Example array of strings
+let times: string[] = ["23:50:32", "14:00", "23:00", "02:45", "2:45", "9:30:01", "19:30", "25:80", "invalid"];
+
+// Filtering the array to get only valid times
+let validTimes = times.filter(time => timeRegex.test(time));
+
+console.log(validTimes); // This will log only the valid times
+
+```
+**In this TypeScript code, an array of strings (times) is filtered using the regular expression timeRegex**
+
+**The .filter() method tests each string against the regex, and only those that match (valid times) are included in the validTimes array. The resulting array is then logged to the console.**
