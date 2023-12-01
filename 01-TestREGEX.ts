@@ -7,8 +7,6 @@ console.log(phoneNumbers);
 
 // [ '414-555-3212', '123-456-7890', '999-888-7777' ]
 
-console.log(!phoneNumbers)
-
 /*
 
 Using regular expressions (regex) for 
